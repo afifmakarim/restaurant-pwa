@@ -1,25 +1,49 @@
 import CONFIG from "../../globals/config";
 
 const createRestoDetailTemplate = (resto) => `
-  <h2 class="movie__title">${resto.title}</h2>
-  <img class="movie__poster" src="${
-    CONFIG.BASE_IMAGE_URL + resto.poster_path
-  }" alt="${resto.title}" />
-  <div class="movie__info">
+  <h2 class="restau__title">${resto.name}</h2>
+  <img class="restau__poster" src="${
+    CONFIG.BASE_IMAGE_URL + resto.pictureId
+  }" alt="${resto.name}" />
+  <div class="restau__info">
   <h3>Information</h3>
-    <h4>Tagline</h4>
-    <p>${resto.tagline}</p>
-    <h4>Release Date</h4>
-    <p>${resto.release_date}</p>
-    <h4>Duration</h4>
-    <p>${resto.runtime} minutes</p>
+    <h4>Address</h4>
+    <p>${resto.address}</p>
+    <h4>City</h4>
+    <p>${resto.city}</p>
     <h4>Rating</h4>
-    <p>${resto.vote_average}</p>
+    <p>${resto.rating}</p>
+    <h4>Category</h4>
+    <p>${resto.categories.map((category) => `${category.name}`).join(", ")}</p>
   </div>
-  <div class="movie__overview">
-    <h3>Overview</h3>
-    <p>${resto.overview}</p>
+  <div class="restau__overview">
+    <h3>Description</h3>
+    <p>${resto.description}</p>
+    <h3>Foods</h3>
+    ${resto.menus.foods
+      .map((food) => `<li class="menu-item">${food.name}</li>`)
+      .join(" ")}
+      <h3>Drinks</h3>
+    ${resto.menus.foods
+      .map((drink) => `<li class="menu-item">${drink.name}</li>`)
+      .join(" ")}
   </div>
+  <div class="restau__reviews">
+  <h1>Customer Review</h1>
+  <div class="review-container">
+  ${resto.customerReviews
+    .map(
+      (review) => `
+          <div class="review-body">
+              <h3 class="review-consumer-name">${review.name}</h3>
+              <small class="review-date-post">${review.date}</small>
+              <p class="review-content">${review.review}</p>
+          </div>
+      `
+    )
+    .join("")}
+    </div>
+    </div>
 `;
 
 const createRestoItemTemplate = (resto) => `

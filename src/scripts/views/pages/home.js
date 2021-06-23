@@ -4,12 +4,8 @@ import { createRestoItemTemplate } from "../templates/template-creator";
 const Home = {
   async render() {
     return `
-    <div class="content">
-      <h2 class="content__heading">Resto List</h2>
-      <div id="resto" class="resto">
+    <div id="resto" class="resto"></div>
 
-      </div>
-    </div>
   `;
   },
 

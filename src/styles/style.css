@@ -95,7 +95,7 @@ main {
 }
 
 /*
-    Movies
+    Restaus
   */
 
 .resto {
@@ -106,7 +106,7 @@ main {
 }
 
 /*
-    Movie Item
+    Restau Item
   */
 
 .restau-item {
@@ -163,7 +163,7 @@ main {
 }
 
 /*
-    Movie
+    Restau
   */
 
 .restau {
@@ -175,12 +175,12 @@ main {
   gap: 18px 16px;
 }
 
-.restau .movie__poster {
+.restau .restau__poster {
   width: 100%;
   max-width: 400px;
 }
 
-.restau .movie__info h4 {
+.restau .restau__info h4 {
   margin: 8px 0;
 }
 
@@ -200,4 +200,24 @@ footer p {
 footer p a {
   color: #db0000;
   text-decoration: none;
+}
+
+/* review */
+
+.restau__reviews {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.restau__reviews h1 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.review-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 0;
+  margin-bottom: 20px;
 }
