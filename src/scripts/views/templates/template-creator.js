@@ -44,9 +44,25 @@ const createRestoDetailTemplate = (resto) => `
     .join("")}
     </div>
     </div>
+    <div class="review-form-container">
+    <h2>Make a Review</h2>
+    <form class="review-form" id="review-form">
+        <input type="hidden" name="id" value="${resto.id}">
+        <div class="review-form-element">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" autocomplete="off">
+        </div>
+        <div class="review-form-element">
+            <label for="review">Review</label>
+            <textarea name="review" id="review"></textarea>
+        </div>
+        <button type="submit" id="button-review">Add Review</button>
+    </form>
+</div>
 `;
 
 const createRestoItemTemplate = (resto) => `
+  </div>
   <div class="restau-item">
     <div class="restau-item__header">
         <img class="restau-item__header__poster" alt="${resto.name}"
@@ -68,4 +84,20 @@ const createRestoItemTemplate = (resto) => `
   </div>
   `;
 
-export { createRestoItemTemplate, createRestoDetailTemplate };
+const createLikeButtonTemplate = () => `
+  <button aria-label="like this movie" id="likeButton" class="like">
+     <i class="fa fa-heart-o" aria-hidden="true"></i>
+  </button>
+`;
+
+const createLikedButtonTemplate = () => `
+  <button aria-label="unlike this movie" id="likeButton" class="like">
+    <i class="fa fa-heart" aria-hidden="true"></i>
+  </button>
+`;
+export {
+  createRestoItemTemplate,
+  createRestoDetailTemplate,
+  createLikeButtonTemplate,
+  createLikedButtonTemplate,
+};
