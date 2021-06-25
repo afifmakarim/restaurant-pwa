@@ -13,7 +13,7 @@ const Home = {
         serving up local authentic cuisine. you'll find the very best in high
         quality ingredients and dishes that are loaded with flavor!
       </p>
-      <a class="btn-primary" href="#restaurant">Explore Us</a>
+      <a class="btn-primary" href="#resto">Explore Us</a>
     </div>
   </div>
     <div id="resto" class="resto"></div>
