@@ -80,6 +80,7 @@ const createRestoItemTemplate = (resto) => `
     <div class="restau-item__content">
         <h3><a href="${`/#/detail/${resto.id}`}">${resto.name}</a></h3>
         <p>${resto.description}</p>
+        <h3 class="restau_item_cities">${resto.city}</h3>
     </div>
   </div>
   `;

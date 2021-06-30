@@ -39,7 +39,7 @@ body {
 .app-bar .app-bar__menu button {
   background-color: transparent;
   border: none;
-  font-size: 18px;
+  font-size: 22px;
   padding: 8px;
   cursor: pointer;
 }
@@ -78,6 +78,7 @@ body {
   padding: 8px;
   margin-bottom: 5px;
   width: 100%;
+  font-size: 22px;
 }
 
 /*
@@ -156,6 +157,7 @@ main {
 .restau-item .restau-item__content h3 a {
   color: #db0000;
   text-decoration: none;
+  font-size: 32px;
 }
 
 .restau-item .restau-item__content p {
@@ -166,6 +168,11 @@ main {
   -webkit-box-orient: vertical;
 }
 
+.restau_item_cities {
+  display: flex;
+  justify-content: flex-end;
+}
+
 /*
     Restau
   */
@@ -174,9 +181,6 @@ main {
   margin: 0 auto;
   width: 100%;
   max-width: 800px;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 18px 16px;
 }
 
 .restau .restau__poster {
@@ -225,6 +229,7 @@ footer p a {
   padding: 0;
   margin-bottom: 20px;
 }
+
 
 /* jumbotron */
 
@@ -303,7 +308,7 @@ footer p a {
 
 .review-form-element input {
   border: 1px solid #ff7c57;
-  padding: 7px 20px;
+  padding: 15px 20px;
   font-size: 16px;
   color: #6e6c6c;
   border-radius: 3px;
@@ -366,4 +371,18 @@ footer p a {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: red;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
 }
