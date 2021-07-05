@@ -31,6 +31,7 @@ const Detail = {
         description: resto.description,
         pictureId: resto.pictureId,
         rating: resto.rating,
+        city: resto.city,
       },
     });
   },

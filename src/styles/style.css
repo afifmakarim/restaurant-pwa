@@ -39,7 +39,7 @@ body {
 .app-bar .app-bar__menu button {
   background-color: transparent;
   border: none;
-  font-size: 22px;
+  font-size: 32px;
   padding: 8px;
   cursor: pointer;
 }
@@ -86,12 +86,13 @@ body {
   */
 
 main {
-  padding: 32px;
+  /* padding: 32px; */
   flex: 1;
 }
 
 .content {
   margin: 0 auto;
+  padding: 32px;
   min-height: 100%;
 }
 
@@ -102,6 +103,9 @@ main {
 /*
     Restaus
   */
+#resto {
+  padding: 32px;
+}
 
 .resto {
   display: grid;
@@ -229,7 +233,6 @@ footer p a {
   padding: 0;
   margin-bottom: 20px;
 }
-
 
 /* jumbotron */
 
