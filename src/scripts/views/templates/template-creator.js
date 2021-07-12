@@ -69,12 +69,21 @@ const createRestoItemTemplate = (resto) => `
   </div>
   <div class="restau-item">
     <div class="restau-item__header">
-        <img class="restau-item__header__poster" alt="${resto.name}"
+    <picture>
+    <source media="(max-width: 600px)" srcset="${
+      resto.pictureId
+        ? CONFIG.BASE_IMAGE_URL + resto.pictureId
+        : "https://picsum.photos/id/666/800/450?grayscale"
+    }">
+        <img class="lazyload" class="restau-item__header__poster" alt="${
+          resto.name
+        }"
             src="${
               resto.pictureId
                 ? CONFIG.BASE_IMAGE_URL + resto.pictureId
                 : "https://picsum.photos/id/666/800/450?grayscale"
             }">
+          </picture>
         <div class="restau-item__header__rating">
             <p>⭐️<span class="restau-item__header__rating__score">${
               resto.rating
@@ -82,7 +91,9 @@ const createRestoItemTemplate = (resto) => `
         </div>
     </div>
     <div class="restau-item__content">
-        <h3><a href="${`/#/detail/${resto.id}`}">${resto.name}</a></h3>
+        <h3 class="resto_title"><a href="${`/#/detail/${resto.id}`}">${
+  resto.name
+}</a></h3>
         <p>${resto.description}</p>
         <h3 class="restau_item_cities">${resto.city}</h3>
     </div>
@@ -90,13 +101,13 @@ const createRestoItemTemplate = (resto) => `
   `;
 
 const createLikeButtonTemplate = () => `
-  <button aria-label="like this movie" id="likeButton" class="like">
+  <button aria-label="like this resto" id="likeButton" class="like">
      <i class="fa fa-heart-o" aria-hidden="true"></i>
   </button>
 `;
 
 const createLikedButtonTemplate = () => `
-  <button aria-label="unlike this movie" id="likeButton" class="like">
+  <button aria-label="unlike this resto" id="likeButton" class="like">
     <i class="fa fa-heart" aria-hidden="true"></i>
   </button>
 `;

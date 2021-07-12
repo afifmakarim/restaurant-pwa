@@ -5,7 +5,10 @@ const Home = {
   async render() {
     return `
     <div class="jumbotron">
-    <img src="./images/hero-image_2.jpeg" alt="" />
+    <picture>
+    <source media="(max-width: 600px)" srcset="./images/hero-image_2.jpeg">
+    <img class="lazyload" src="./images/hero-image_2.jpeg" alt="hunger apps"></img>
+    </picture>
     <div class="description">
       <h1>Hunger Apps</h1>
       <p>
