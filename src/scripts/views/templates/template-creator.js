@@ -70,7 +70,7 @@ const createRestoItemTemplate = (resto) => `
   <div class="restau-item">
     <div class="restau-item__header">
     <picture>
-    <source media="(max-width: 600px)" srcset="${
+    <source media="(max-width: 800px)" srcset="${
       resto.pictureId
         ? CONFIG.BASE_IMAGE_URL + resto.pictureId
         : "https://picsum.photos/id/666/800/450?grayscale"
@@ -78,7 +78,7 @@ const createRestoItemTemplate = (resto) => `
         <img class="lazyload" class="restau-item__header__poster" alt="${
           resto.name
         }"
-            src="${
+            data-src="${
               resto.pictureId
                 ? CONFIG.BASE_IMAGE_URL + resto.pictureId
                 : "https://picsum.photos/id/666/800/450?grayscale"

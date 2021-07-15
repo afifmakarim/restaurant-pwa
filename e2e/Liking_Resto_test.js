@@ -46,4 +46,5 @@ Scenario("unliking one restaurant", async ({ I }) => {
 
   // menuju page favorit untuk memastikan berhasil melakukan unlike
   I.amOnPage("/#/favorite");
+  I.dontSeeElement(".restau-item"); // item is not shown
 });
